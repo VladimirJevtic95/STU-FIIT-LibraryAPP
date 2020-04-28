@@ -1,0 +1,23 @@
+.galerija {
+  width: 100%;
+  display: inline-block;
+}
+
+.galerija img {
+  height: 300px;
+  width: 100%;
+}
+
+.image_gal {
+  width: 32%;
+  display: inline-block;
+  float: left;
+  margin: 2px;
+}
+
+.galerija,
+.image_gal {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}

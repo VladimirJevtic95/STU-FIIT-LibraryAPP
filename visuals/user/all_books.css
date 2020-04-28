@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap");
+
+.kartica {
+  display: inline-block;
+  width: 23.9%;
+  margin: 5px;
+  height: 130px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.kartica:hover {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.507);
+}
+
+.kartica_info {
+  z-index: 43;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.kartica_category {
+  text-transform: uppercase;
+  font-size: 13px;
+  /* line-height: 2rem; */
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  color: #353535;
+}
+
+.kartica_title {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.kartica_by {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.kartica_author {
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #4360b5;
+}
+
+.kartica:hover .kartica_info {
+  background-color: transparent;
+  position: relative;
+}
+
+.kartica:hover .kartica_info-hover {
+  opacity: 1;
+}
+
+.icon-option-1,
+.icon-option-2 {
+  margin-left: 7px;
+  font-size: 1.5rem;
+  float: right;
+}
+
+.icon-option-1 {
+  text-decoration: none;
+  color: #4360b5;
+}
+
+.icon-option-2 {
+  text-decoration: none;
+  color: #353535;
+}
+
+.extra-options i:hover {
+  color: black;
+}
+
+.lista-books {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.lista-books-li {
+  float: left;
+}
+
+.lista-books-li a {
+  display: block;
+  color: #353535;
+  text-align: center;
+  font-weight: 500;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.lista-books-li a:hover {
+  color: #000000;
+  font-weight: 700;
+}

@@ -1,0 +1,107 @@
+.profileFull {
+  width: 100%;
+}
+
+.profilePic {
+    margin-left: 40px;
+  position: relative;
+  width: 30%;
+  display: inline-block;
+}
+
+.profileDesc {
+  width: 60%;
+  display: inline-block;
+}
+
+/* ////////////////////////////////////////// */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
+
+input {
+  background-image: none;
+  border: none;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.forma {
+  padding: 10px;
+}
+
+.outer {
+  text-align: center;
+}
+
+.register input {
+  border-radius: 3px;
+}
+
+.register input[type="text"],
+.register input[type="password"],
+.register input[type="number"] {
+  background: none;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  padding: 10px;
+  width: 100%;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #2b2b2b;
+  opacity: 1; /* Firefox */
+}
+
+:focus {
+  outline: none;
+}
+
+/* //////////////ALIGN HORIZONTAL INSIDE DIV////////////////////////// */
+.outer {
+  margin-top: 30px;
+}
+.outer:before {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* //////////////////////////////////////// */
+
+.input_profile {
+  margin: 8px;
+  width: 70%;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.input_reister_age {
+  width: 30%;
+  margin: 8px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.animacija {
+  width: 100%;
+  border: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid #2b2b2b;
+}
+
+.animacija ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #3399ff;
+  transition: 0.4s;
+}
+.animacija:focus ~ .focus-border {
+  width: 100%;
+  transition: 0.4s;
+}

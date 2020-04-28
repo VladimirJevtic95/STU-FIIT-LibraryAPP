@@ -1,0 +1,116 @@
+table {
+  text-align: center;
+  border-spacing: 0px !important;
+  width: 100%;
+}
+
+.row100.head th {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.row100 td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/*==================================================================
+  [ Ver2 ]*/
+.table.books_table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.table.books_table td {
+  font-size: 14px;
+  color: #000;
+}
+
+.table.books_table th {
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #040711;
+}
+
+.table.books_table th a {
+  color: #fff;
+}
+
+.table.books_table .row100:hover td {
+  background-color: #04071131;
+  color: #000000;
+}
+
+.table.books_table .hov-column-books_table {
+  background-color: #04071131;
+  color: #000000;
+}
+
+.table.books_table .row100 td:hover {
+  background-color: #040711;
+  color: #fff;
+}
+
+/* table pagination s*/
+
+.ul-pagination {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: #040711;
+  overflow: hidden;
+}
+
+.li-pagination {
+  float: left;
+}
+
+.disabled {
+  display: none;
+}
+
+.active {
+  background-color: #666;
+  color: white;
+}
+
+.li-pagination a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.li-pagination a:hover {
+  background-color: #b3b4b7;
+}
+
+/* /////////////////////////////////////// */
+/* BUTTONS */
+
+.btn_table {
+  font-family: "Ubuntu", sans-serif;
+  border: none;
+  background: #040711;
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 10px;
+  margin: 2px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+
+.btn_table:hover {
+  background: #b3b4b7 !important;
+  color: #040711 !important;
+  font-weight: 700 !important;
+  border-radius: 2px;
+  background: none;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(255, 255, 255);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(255, 255, 255);
+  transition: all 0.3s ease 0s;
+}

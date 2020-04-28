@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap");
+
+/* //////////////////////////////// */
+/* //////////////////////////////// */
+/* //////////////////////////////// */
+
+.card {
+  width: 80%;
+  position: absolute;
+  background: white;
+  margin: 0 auto;
+  top: 50%;
+  font-family: "Ubuntu", sans-serif;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: all 0.3s;
+}
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card nav {
+  width: 100%;
+  color: #727272;
+  text-transform: uppercase;
+  margin-top: -15px;
+  padding: 10px;
+  border-bottom: 2px solid #efefef;
+  font-size: 12px;
+}
+
+.card .edit-book {
+  padding: 30px;
+  float: left;
+  width: 100%;
+}
+
+.input_edit {
+  padding-right: 30px;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+.card .edit-book textarea {
+  resize: none;
+  width: 100%;
+  margin-top: 4px;
+  border: 2px solid #040711;
+  padding: 10px;
+}
+
+.card .edit-book textarea:focus {
+  border: 2px solid #263c83;
+}
+
+.editfield {
+  padding: 10px;
+  border: 2px solid #040711;
+}
+
+.editfield:focus {
+  border: 2px solid #263c83;
+}
+
+#the-count {
+  margin-top: 2px;
+  float: right;
+  font-size: 14px;
+}
+
+.forma {
+  padding: 10px;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #2b2b2b;
+  opacity: 1; /* Firefox */
+}
+
+:focus {
+  outline: none;
+}
+
+/* ////////////////////////////// */
+.button_submit {
+  margin: 20px 0 20px 0;
+  text-align: center;
+}
+
+.but_anim {
+  font-family: "Ubuntu", sans-serif;
+  border: none;
+  background: #2b2b2b;
+  color: #ffffff !important;
+  font-weight: 400;
+  font-size: 15px;
+  padding: 15px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+
+.but_anim:hover {
+  color: #2b2b2b !important;
+  font-weight: bold !important;
+  letter-spacing: 1.5px;
+  border-radius: 2px;
+  background: none;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+}
+
+.bottom-part {
+  text-align: center;
+}

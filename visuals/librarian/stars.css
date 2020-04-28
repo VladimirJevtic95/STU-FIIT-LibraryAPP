@@ -1,0 +1,30 @@
+
+/*---------- star rating ----------*/
+.star-rating{
+  z-index: 15;
+  position: relative;
+  float: left;
+}
+
+.star-rating, .back-stars, .front-stars {
+  display: flex;
+}
+
+.star-rating {
+  align-items: center;
+  font-size: 1.2em;
+  justify-content: center;
+}
+
+.back-stars {
+  color: #040711;
+  position: relative;
+}
+
+.front-stars {
+  color: #040711;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s;
+}

@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap");
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  background: url("../img/bg.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+p {
+  font-size: 0.9rem;
+  margin-top: 25px;
+  text-align: center;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+input {
+  background-image: none;
+  border: none;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.grid {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  background: #ffffffb4;
+  border-radius: 5px;
+  width: 460px;
+  height: 350px;
+  padding: 20px 26px;
+}
+
+.forma {
+  padding: 10px;
+}
+
+.login input {
+  border-radius: 3px;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  background: none;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  padding: 10px;
+  width: 100%;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #2b2b2b;
+  opacity: 1; /* Firefox */
+}
+
+:focus {
+  outline: none;
+}
+
+.input_login {
+  margin-top: 30px;
+  width: 100%;
+  position: relative;
+}
+
+.animacija {
+  border: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid #2b2b2b;
+}
+
+.animacija ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #3399ff;
+  transition: 0.4s;
+}
+.animacija:focus ~ .focus-border {
+  width: 100%;
+  transition: 0.4s;
+}
