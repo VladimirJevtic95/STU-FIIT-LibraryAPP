@@ -4,12 +4,10 @@ session_start();
 
 include "../backend_logic/logic.connection.php";
 
-// Check user logged or not
 if (!isset($_SESSION["current_userID"]) && !isset($_SESSION["current_username"])) {
     header('Location: ../person/person_login.php');
 }
 
-//ovo radi treba da se svuda stavi
 if (($_SESSION["current_role"]) != 1) {
     session_unset();
     session_destroy();
@@ -71,7 +69,6 @@ $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'D
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="../visuals/user/user_nav.css">
     <link rel="stylesheet" href="../visuals/user/table.css">
-    <!-- <link rel="stylesheet" href="../visuals/stars.css"> -->
     <link rel="stylesheet" href="../visuals/user/book_review_history_style.css">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

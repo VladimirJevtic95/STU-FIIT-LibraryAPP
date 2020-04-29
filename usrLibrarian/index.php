@@ -4,25 +4,15 @@ session_start();
 
 include "../backend_logic/logic.connection.php";
 
-// Check user logged or not
 if (!isset($_SESSION["current_userID"]) && !isset($_SESSION["current_username"])) {
     header('Location: ../person/person_login.php');
 }
 
-
-//ovo radi treba da se svuda stavi
 if (($_SESSION["current_role"]) != 2) {
     session_unset();
     session_destroy();
     header('Location: ../person/person_login.php?');
 }
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// https://www.allphptricks.com/create-simple-pagination-using-php-and-mysqli/ -- pagination
-// https://codeshack.io/how-to-sort-table-columns-php-mysql/ -- sorting order in table
-// http://localhost/stu_fiit_database_systems/usrRenter/index.php
-// ---------------------------------------------------------------------------------------------------------------------
 
 //define the number of results we want per page
 $results_per_page = 12;
@@ -162,7 +152,7 @@ $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'D
                                 <th class="column100"><a href="index.php?column=person_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Ime i prezime<i class="fas fa-sort<?php echo $column == 'person_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
                                 <th class="column100"><a href="index.php?column=person_age&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Godina<i class="fas fa-sort<?php echo $column == 'person_age' ? '-' . $up_or_down : ''; ?>"></i></a></th>
                                 <th class="column100"><a href="index.php?column=role_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Rola<i class="fas fa-sort<?php echo $column == 'role_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
-                                <th class="column100">OPCIJA</th>
+                                <th class="column100"></th>
                             </tr>
                         </thead>
                         <?php while ($row = $result->fetch_assoc()) : ?>

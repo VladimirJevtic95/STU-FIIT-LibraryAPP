@@ -4,13 +4,10 @@ session_start();
 
 include "../backend_logic/logic.connection.php";
 
-// Check user logged or not
 if (!isset($_SESSION["current_userID"]) && !isset($_SESSION["current_username"])) {
     header('Location: ../person/person_login.php');
 }
 
-
-//ovo radi treba da se svuda stavi
 if (($_SESSION["current_role"]) != 2) {
     session_unset();
     session_destroy();
@@ -26,8 +23,6 @@ $row_book_name = $result_book_name->fetch_assoc();
 $BOOK_NAME = $row_book_name['book_name'];
 
 
-//////////////////////////////////////////////
-//////////////////////////////////////////////
 //////////////////////////////////////////////
 
 //define the number of results we want per page
@@ -158,7 +153,6 @@ $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'D
             if ($result = mysqli_query($conn, $upit)) {
 
                 $up_or_down = str_replace(array('ASC', 'DESC'), array('up', 'down'), $sort_order);
-                // $asc_or_desc = $sort_order == 'ASC' ? 'desc' : 'asc';
                 //samo asc order
                 $asc_or_desc = $sort_order == 'ASC' ? 'asc' : 'asc';
 

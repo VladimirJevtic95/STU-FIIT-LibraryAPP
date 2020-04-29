@@ -4,12 +4,10 @@ session_start();
 
 include "../backend_logic/logic.connection.php";
 
-// Check user logged or not
 if (!isset($_SESSION["current_userID"]) && !isset($_SESSION["current_username"])) {
     header('Location: ../person/person_login.php');
 }
 
-//ovo radi treba da se svuda stavi
 if (($_SESSION["current_role"]) != 1) {
     session_unset();
     session_destroy();
@@ -39,7 +37,6 @@ $library_name = $row_library_name['library_name'];
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="../visuals_js/hamburger_nav.js"></script>
 
-    <!-- gallery -->
     <link rel="stylesheet" type="text/css" href="../gallery_library/fancybox/jquery.fancybox.min.css">
 </head>
 

@@ -4,23 +4,15 @@ session_start();
 
 include "../backend_logic/logic.connection.php";
 
-// Check user logged or not
 if (!isset($_SESSION["current_userID"]) && !isset($_SESSION["current_username"])) {
     header('Location: ../person/person_login.php');
 }
 
-//ovo radi treba da se svuda stavi
 if (($_SESSION["current_role"]) != 2) {
     session_unset();
     session_destroy();
     header('Location: ../person/person_login.php?');
 }
-
-
-
-// ---------------------------------------------------------------------------------------------------------------------
-// http://localhost/stu_fiit_database_systems/usrRenter/index.php
-// ---------------------------------------------------------------------------------------------------------------------
 
 //define the number of results we want per page
 $results_per_page = 12;
@@ -168,7 +160,7 @@ $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'D
                                 <th class="column100"><a href="?column=book_publication_date&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Publication date<i class="fas fa-sort<?php echo $column == 'book_publication_date' ? '-' . $up_or_down : ''; ?>"></i></a></th>
                                 <th class="column100"><a href="?column=genre_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Genre<i class="fas fa-sort<?php echo $column == 'genre_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
                                 <th class="column100"><a href="?column=author_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Author<i class="fas fa-sort<?php echo $column == 'author_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
-                                <th class="column100">OPCIJA</th>
+                                <th class="column100"></th>
                             </tr>
                         </thead>
                         <?php while ($row = $result->fetch_assoc()) : ?>

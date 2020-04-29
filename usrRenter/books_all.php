@@ -4,20 +4,15 @@ session_start();
 
 include "../backend_logic/logic.connection.php";
 
-// Check user logged or not
 if (!isset($_SESSION["current_userID"]) && !isset($_SESSION["current_username"])) {
     header('Location: ../person/person_login.php');
 }
 
-//ovo radi treba da se svuda stavi
 if (($_SESSION["current_role"]) != 1) {
     session_unset();
     session_destroy();
     header('Location: ../person/person_login.php?');
 }
-// ---------------------------------------------------------------------------------------------------------------------
-// http://localhost/stu_fiit_database_systems/usrRenter/index.php
-// ---------------------------------------------------------------------------------------------------------------------
 
 //define the number of results we want per page
 $results_per_page = 20;
@@ -141,7 +136,6 @@ $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'D
         <div class="main_container">
 
             <?php
-            // Get the result...
 
             $upit = 'SELECT 
     book.book_id, book.book_name, book.book_short_description, book.book_publication_date, book_genre.genre_name, book_author.author_name, book_author.author_surname
@@ -152,7 +146,6 @@ $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'D
             if ($result = mysqli_query($conn, $upit)) {
 
                 $up_or_down = str_replace(array('ASC', 'DESC'), array('up', 'down'), $sort_order);
-                // $asc_or_desc = $sort_order == 'ASC' ? 'desc' : 'asc';
                 //samo asc order
                 $asc_or_desc = $sort_order == 'ASC' ? 'asc' : 'asc';
 
@@ -187,8 +180,6 @@ $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'D
                         </div>
                     </article>
 
-                    <!-- //////////////////////////////////////////////////////////////////////// -->
-                    <!-- //////////////////////////////////////////////////////////////////////// -->
                     <!-- //////////////////////////////////////////////////////////////////////// -->
                     <?php
                     $BOOKID = $row['book_id'];
@@ -237,8 +228,6 @@ $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'D
                         </div>
                     </div>
 
-                    <!-- //////////////////////////////////////////////////////////////////////// -->
-                    <!-- //////////////////////////////////////////////////////////////////////// -->
                     <!-- //////////////////////////////////////////////////////////////////////// -->
                 <?php endwhile; ?>
 

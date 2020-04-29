@@ -4,12 +4,10 @@ session_start();
 
 include "../backend_logic/logic.connection.php";
 
-// Check user logged or not
 if (!isset($_SESSION["current_userID"]) && !isset($_SESSION["current_username"])) {
     header('Location: ../person/person_login.php');
 }
 
-//ovo radi treba da se svuda stavi
 if (($_SESSION["current_role"]) != 2) {
     session_unset();
     session_destroy();

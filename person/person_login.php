@@ -1,5 +1,4 @@
 <?php
-// Start the session
 session_start();
 
 include "../backend_logic/logic.connection.php";
@@ -40,7 +39,6 @@ if (isset($_POST['btn_submit'])) {
                 header('Location: ../usrAdmin/index.php');
             }
         } else {
-            // $error = "Invalid username and password";
             header("Location: ?Invalid_username_or_password");
         }
     }
@@ -87,20 +85,9 @@ if (isset($_POST['btn_submit'])) {
                 <p>Don't have an account? <a href="person_register.php">Register here</a></p>
             </form>
 
-        </div> <!-- end login -->
+        </div>
 
     </div>
-
-    <!-- <form method="post">
-
-        <input type="text" id="txt_username" name="txt_username" placeholder="username" required>
-
-        <input type="text" id="txp_password" name="txp_password" placeholder="password" required>
-
-        <button type="submit" name="btn_submit" id="btn_submit">
-            Login
-        </button>
-    </form> -->
 
 </body>
 

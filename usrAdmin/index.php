@@ -4,12 +4,11 @@ session_start();
 
 include "../backend_logic/logic.connection.php";
 
-// Check user logged or not
 if (!isset($_SESSION["current_userID"]) && !isset($_SESSION["current_username"])) {
     header('Location: ../person/person_login.php');
 }
 
-//ovo radi treba da se svuda stavi
+//if user tries to redirect via URL to another role
 if (($_SESSION["current_role"]) != 3) {
     session_unset();
     session_destroy();
@@ -127,8 +126,6 @@ $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'D
         <div class="main_container">
 
             <?php
-            // Get the result...
-
             $upit = 'SELECT 
     person.person_id, person.person_name, person.person_surname, person.person_username, person.person_age, roles.role_name
     FROM person, roles WHERE person.person_role_FK = roles.role_id AND person.person_role_FK = 1

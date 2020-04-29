@@ -4,21 +4,15 @@ session_start();
 
 include "../backend_logic/logic.connection.php";
 
-// Check user logged or not
 if (!isset($_SESSION["current_userID"]) && !isset($_SESSION["current_username"])) {
     header('Location: ../person/person_login.php');
 }
 
-//ovo radi treba da se svuda stavi
 if (($_SESSION["current_role"]) != 3) {
     session_unset();
     session_destroy();
     header('Location: ../person/person_login.php?');
 }
-
-// ---------------------------------------------------------------------------------------------------------------------
-// http://localhost/stu_fiit_database_systems/usrRenter/index.php
-// ---------------------------------------------------------------------------------------------------------------------
 
 //define the number of results we want per page
 $results_per_page = 12;

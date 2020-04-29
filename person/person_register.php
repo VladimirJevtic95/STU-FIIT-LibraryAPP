@@ -61,7 +61,7 @@
                 <p>Already have an account? <a href="person_login.php">Sign in here</a></p>
             </form>
 
-        </div> <!-- end register -->
+        </div>
 
     </div>
 

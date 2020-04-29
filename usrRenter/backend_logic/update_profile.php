@@ -4,7 +4,6 @@ session_start();
 
 include "../../backend_logic/logic.connection.php";
 
-// Check user logged or not
 if (!isset($_SESSION["current_userID"]) && !isset($_SESSION["current_username"])) {
     header('Location: ../person/person_login.php');
 }
@@ -23,7 +22,6 @@ $sql = "UPDATE person SET person_name = '$Name', person_surname = '$Surname', pe
 
 if (isset($_POST['btn_update'])) {
     mysqli_query($conn, $sql);
-    // header('Location: ../profile.php?SUCCESS');
     session_unset();
     session_destroy();
     header('Location:../../person/person_login.php');
