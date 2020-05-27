@@ -148,10 +148,10 @@ $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'D
                     <table data-vertable="books_table">
                         <thead>
                             <tr class="row100 head">
-                                <th class="column100"><a href="index.php?column=person_id&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Id<i class="fas fa-sort<?php echo $column == 'person_id' ? '-' . $up_or_down : ''; ?>"></i></a></th>
-                                <th class="column100"><a href="index.php?column=person_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Ime i prezime<i class="fas fa-sort<?php echo $column == 'person_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
-                                <th class="column100"><a href="index.php?column=person_age&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Godina<i class="fas fa-sort<?php echo $column == 'person_age' ? '-' . $up_or_down : ''; ?>"></i></a></th>
-                                <th class="column100"><a href="index.php?column=role_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Rola<i class="fas fa-sort<?php echo $column == 'role_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                                <th class="column100"><a href="index.php?column=person_id&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Id <i class="fas fa-sort<?php echo $column == 'person_id' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                                <th class="column100"><a href="index.php?column=person_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Name <i class="fas fa-sort<?php echo $column == 'person_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                                <th class="column100"><a href="index.php?column=person_age&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Years old <i class="fas fa-sort<?php echo $column == 'person_age' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                                <th class="column100"><a href="index.php?column=role_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Role <i class="fas fa-sort<?php echo $column == 'role_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
                                 <th class="column100"></th>
                             </tr>
                         </thead>

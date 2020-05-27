@@ -155,11 +155,11 @@ $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'D
                     <table data-vertable="books_table">
                         <thead>
                             <tr class="row100 head">
-                                <th class="column100"><a href="?column=book_id&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Id<i class="fas fa-sort<?php echo $column == 'book_id' ? '-' . $up_or_down : ''; ?>"></i></a></th>
-                                <th class="column100"><a href="?column=book_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Book name<i class="fas fa-sort<?php echo $column == 'book_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
-                                <th class="column100"><a href="?column=book_publication_date&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Publication date<i class="fas fa-sort<?php echo $column == 'book_publication_date' ? '-' . $up_or_down : ''; ?>"></i></a></th>
-                                <th class="column100"><a href="?column=genre_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Genre<i class="fas fa-sort<?php echo $column == 'genre_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
-                                <th class="column100"><a href="?column=author_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Author<i class="fas fa-sort<?php echo $column == 'author_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                                <th class="column100"><a href="?column=book_id&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Id <i class="fas fa-sort<?php echo $column == 'book_id' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                                <th class="column100"><a href="?column=book_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Book name <i class="fas fa-sort<?php echo $column == 'book_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                                <th class="column100"><a href="?column=book_publication_date&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Publication date <i class="fas fa-sort<?php echo $column == 'book_publication_date' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                                <th class="column100"><a href="?column=genre_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Genre <i class="fas fa-sort<?php echo $column == 'genre_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                                <th class="column100"><a href="?column=author_name&order=<?php echo $asc_or_desc; ?>&page=<?php echo $page_number; ?>">Author <i class="fas fa-sort<?php echo $column == 'author_name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
                                 <th class="column100"></th>
                             </tr>
                         </thead>
